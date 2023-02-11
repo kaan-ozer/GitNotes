@@ -2,7 +2,7 @@
 
 # Git'e İlişkin Sorular ve Yanıtları.
 
-##### 1.Soru: Remote repositoryde bulunan commitler nasıl geri alınır
+### 1.Soru: Remote repositoryde bulunan commitler nasıl geri alınır
 
 > Bir commit'i geri almak için $ git'te "$ git revert" komutunu kullanabilirsiniz. Bu komut, verilen commit'in tüm değişikliklerini geri alır ve aynı zamanda bir yeni commit oluşturur, bu sayede geri alınan değişikliklerin geçmişte kaydedilmiş olduğu görülebilir.
 
@@ -33,7 +33,7 @@
 ---
 
 
-#####  2.Soru:  Git de Head kavramı neyi ifade eder.
+###  2.Soru:  Git de Head kavramı neyi ifade eder.
 
  
  >  "HEAD"  git terminolojisinde bir pointer olarak tanımlanır ve şu anda işlenen branch'in en son commit noktasını gösterir. HEAD her zaman işlenen branch'in en son commit noktasına işaret etmelidir ve branch değiştiğinde HEAD de değişir.
@@ -44,7 +44,7 @@
 
 ---
 
-#####  3.Soru: Git de Amend komutu kullanıldıktan sonra gelen ekrandan nasıl çıkılır
+###  3.Soru: Git de Amend komutu kullanıldıktan sonra gelen ekrandan nasıl çıkılır
 
 
 >  git amend komutunu kullandıktan sonra, düzenleme ekranından çıkmak için aşağıdaki adımları izleyin:
@@ -60,13 +60,15 @@
 
 >  Not:  git amend komutunu kullanarak değiştirmeye çalıştığınız veritabanının herhangi bir branch'ına push edilmemiş olması önemlidir, aksi takdirde çalışmayabilir ve hata mesajı alabilirsiniz
 
+---
 
-#####  4.Soru: Değişikliklerim Stage'e geçmiyor
+###  4.Soru: Değişikliklerim Stage'e geçmiyor
 
 > Bulunduğunuz dizini kontrol ediniz.
 
+---
 
-#####  5.Soru: Remote Repository ile Local Repository farklı histor'e sahipse ne yapılabilir.
+###  5.Soru: Remote Repository ile Local Repository farklı histor'e sahipse ne yapılabilir.
 
 Yöntem 1:
 
@@ -90,8 +92,9 @@ $ git push origin -f
 
 >Bu nedenle, "git push origin -f" komutunu sadece bilgi sahibi olduğunuz ve ne yaptığınızı anladığınız durumlarda kullanın ve genelde "git push --force-with-lease" komutunu tercih edin.
 
+---
 
-#####  6.Soru: Stash ne zaman lazım olur.
+###  6.Soru: Stash ne zaman lazım olur.
 
 >Git versiyon kontrol sisteminde, "commit etmek" ve "stash etmek" arasındaki fark, değişikliklerin nasıl saklandığı ve ne zaman geri kullanılabileceğidir.
 
@@ -99,9 +102,9 @@ $ git push origin -f
 
 >Örneğin, bir projede çalışırken, aynı anda başka bir branch'e geçmek isteyebilirsiniz. Ancak, mevcut branch'deki değişiklikler henüz kaydedilmedi ve "commit" etmek istemeyebilirsiniz. Bu durumda, değişiklikleri "stash" etmek, çalışma dizinini temiz hale getirmenizi ve başka bir branch'e geçmenizi sağlar. Daha sonra, "stash" edilen değişiklikler "git stash apply" komutu ile geri yüklenebilir.
 
+---
 
-
-#####  7.Soru: remote branchi nasıl senkronize edebilirim.
+###  7.Soru: remote branchi nasıl senkronize edebilirim.
 
 >Remote repository'deki bir branch'ı yerel repository'ye senkronize etmek için aşağıdaki adımları izleyebilirsiniz:
 
@@ -126,8 +129,9 @@ $ git push origin <local-branch-name>
 
 >Bu adımlar, remote repository'deki remote-branch-name branch'ını yerel repository'deki local-branch-name branch'ına senkronize etmenizi sağlar. Senkronizasyon esnasında remote repository'deki değişiklikler yerel repository'ye aktarılır ve yerel repository'deki değişiklikler remote repository'ye gönderilir.
 
+---
 
-#####  8.Soru: git branch master upstreambranch -f   ne anlama gelir?
+###  8.Soru: git branch master upstreambranch -f   ne anlama gelir?
 
 >git branch master upstreambranch -f komutu, master branch'ını upstreambranch branch'ına senkronize etmenizi sağlar ve -f seçeneği bu senkronizasyonu zorunlu hale getirir.
 
@@ -135,7 +139,9 @@ $ git push origin <local-branch-name>
 
 >-f seçeneği, mevcut branch'daki değişiklikleri zorla güncellemenizi sağlar. Eğer branch'deki değişiklikleri kaydetmek istiyorsanız, bu seçeneği kullanmamanız önerilir.
 
-#####  9.Soru: git rebase   ne anlama gelir?
+---
+
+###  9.Soru: git rebase   ne anlama gelir?
 
 >Git rebase, Git veritabanındaki bir branch'ın tarihçesini değiştirmek ve diğer branch'lar ile daha uyumlu hale getirmek için kullanılan bir işlemdir. Bu işlem, branch'ın başlangıç noktasını değiştirerek veya branch'ın tarihçesindeki bazı commit'leri silmek, değiştirmek veya taşımak suretiyle branch'ın tarihçesini yeniden oluşturur.
 
@@ -143,7 +149,9 @@ $ git push origin <local-branch-name>
 
 >Rebase işleminin nasıl yapılacağı ve ne zaman kullanılması gerektiği konusunda dikkatli olunması gerekir, çünkü bu işlem veritabanının geçmişini değiştirebilir ve diğer branch'larla oluşabilecek çakışma sorunlarına yol açabilir. Ayrıca, rebase işlemi yapıldıktan sonra, branch'ın tarihçesi değiştiği için push etmek veya diğer branch'larla paylaşmak için dikkatli olunması gerekir.
 
-#####  10.Soru: git rebase yapıldıktan sonra yapılan önceki commitler silinir mi?
+---
+
+###  10.Soru: git rebase yapıldıktan sonra yapılan önceki commitler silinir mi?
 
 >Hayır, Git rebase işleminde yapılan önceki commit'ler silinmez. Ancak, branch'ın tarihçesi değiştirilir ve branch'ın başlangıç noktası değişebilir. Bu, branch'ın tarihçesindeki bazı commit'lerin silinmiş, değiştirilmiş veya taşınmış görünebilmesine neden olabilir.
 
@@ -151,7 +159,9 @@ $ git push origin <local-branch-name>
 
 >Rebase işlemi, branch'ın tarihçesini daha okunabilir ve daha kolay anlaşılır hale getirmek için kullanılabilir, ancak veritabanının geçmişini değiştirebilir ve diğer branch'larla oluşabilecek çakışma sorunlarına yol açabilir. Bu nedenle, rebasing yapmadan önce dikkatli bir şekilde düşünülmesi ve yapılması gerekir.
 
-#####  10.Soru: bir den fazla merge geri alınır mı ?
+---
+
+###  10.Soru: bir den fazla merge geri alınır mı ?
 
 >Evet, Git'te bir veya daha fazla merge işlemini geri almak mümkündür. Bunu yapmak için aşağıdaki adımları izleyebilirsiniz:
 
@@ -163,9 +173,9 @@ $ git push origin <local-branch-name>
 
 >Not: Git revert komutu sadece son değişiklikleri geri alır ve veritabanının geçmişini değiştirmez. Ayrıca, geri alınan merge işlemlerinin yapıldığı branch'lar ve diğer branch'lar arasındaki ilişkiler de değişmeyebilir. Git'te merge işlemlerini tamamen geri almak ve veritabanının geçmişini değiştirmek istiyorsanız, git reset veya git rebase gibi diğer komutlar kullanabilirsiniz.
 
+---
 
-
-#####  11.Soru: remote repository commit geçmişi nasıl değiştirilir ?
+###  11.Soru: remote repository commit geçmişi nasıl değiştirilir ?
 
 >Remote depo commit geçmişini değiştirmek, yapılan bir işlem olarak görülebilir ve biraz riskli olabilir. Bunun yanı sıra, yapılan bir değişiklik genellikle diğerlerinin çalışmasını etkileyebilir. Bu nedenle, bu işlemleri yapmadan önce dikkatli bir şekilde düşünmeniz ve gereken önlemleri almanız önerilir.
 
